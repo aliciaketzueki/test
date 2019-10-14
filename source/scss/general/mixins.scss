@@ -1,0 +1,118 @@
+// СБРОС КАСТОМНЫХ СТИЛЕЙ
+@mixin title-reset {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin field-reset {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@mixin button-reset {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+}
+
+// РАЗРЕШЕНИЯ
+// 1440 и больше
+@mixin desktop-lg {
+  @media (min-width: $width-desktop) {
+    @content;
+  }
+}
+// меньше 1440
+@mixin desktop {
+  @media (max-width: $width-desktop - 1px) {
+    @content;
+  }
+}
+// меньше 1280
+@mixin tablet-lg {
+  @media (max-width: $width-desktop-small - 1px) {
+    @content;
+  }
+}
+// меньше 1024
+@mixin tablet {
+  @media (max-width: $width-tablet-lg - 1px) {
+    @content;
+  }
+}
+// меньше 768
+@mixin mobile {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+// больше 768
+@mixin mobile-not {
+  @media (min-width: $width-tablet) {
+    @content;
+  }
+}
+// меньше 1024 и переворот экрана
+@mixin mobileLand {
+  @media (max-width: $width-tablet-lg - 1px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// РЕТИНА
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// ШРИФТЫ
+@mixin font-face($name, $filename, $weight) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/"+$filename+".woff2") format("woff2"),
+      url("../fonts/"+$filename+".woff") format("woff");
+  }
+}
+
+
+// ХОВЕРЫ
+@mixin hover {
+  will-change: opacity;
+  transition: opacity $transition;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
+}

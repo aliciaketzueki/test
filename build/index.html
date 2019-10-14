@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portal-frontend</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <div>
+    <header class="header">
+      <div class="container header__container">
+        <a class="header__logo" href="#" aria-label="Логотип">
+          <svg width="171" height="21">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+          <span>обучение стоматологов</span>
+        </a>
+        <div class='header__search'>
+          <label for="search">Введите фамилию, или направление</label>
+          <input type="search" id="search" name="search" placeholder="">
+        </div>
+        <a class="header__acc" href="#">
+          <svg width="33" height="33">
+            <use xlink:href="img/sprite.svg#account"></use>
+          </svg>
+          <span>Аккаунт</span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Добро пожаловать</h2>
+        <p>Заполните пару простых шагов, чтобы начать работу с сервисом</p>
+        <form method="post" action="#" autocomplete="off" >
+          <div>
+            <h3>Личные данные</h3>
+            <span>шаг  1 / 2</span>
+            <label for="tel">Телефон</label>
+            <input type="tel" id="tel" name="tel" placeholder="+7 (___) ___-__-__">
+  
+            <p>войти с помощью:</p>
+            <a href="#">Стоммаркет</a>
+            
+            <p>Вы сможете отредактировать данную информацию позднее в своём личном кабинете</p>
+  
+            <button type="button">Далее</button>
+          </div>
+          <div>
+            <h3>Основная информация</h3>
+            <span>шаг  2 / 2</span>
+            <input type="file">
+            <p>Вы можете загрузить фото в формате .jpg, .png</p>
+            <p>Допустимый объём файла 5 мб</p>
+            <ul>
+              <li>
+                <label for="name">ФИО</label>
+                <input type="text" id="name" name="name" placeholder="Пупкин Владимир Владимирович">
+              </li>
+              <li>
+                <label for="post">Должность</label>
+                <input type="text" id="post" name="post" placeholder="Стоматолог">
+              </li>
+              <li>
+                <label for="city">Город</label>
+                <input type="text" id="city" name="city" placeholder="Санкт-Петербург">
+              </li>
+            </ul>
+
+            <p>Вы сможете отредактировать данную информацию позднее в своём личном кабинете</p>
+  
+            <button type="button">Назад</button>
+            <button type="submit">Регистрация</button>
+          </div>
+
+        </form>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Обучающие центры</a>
+            </li>
+            <li>
+              <a href="#">О проекте</a>
+            </li>
+            <li>
+              <a href="#">Реклама</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul>
+          <li>
+            <a href="#">instagram</a>
+          </li>
+          <li>
+            <a href="#">vk</a>
+          </li>
+        </ul>
+        <div>
+          <p>© стомпортал 2019 / все права защищены</p>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
+        <div>
+          <a href="tel:88124261939">8 812 426-19-39</a>
+          <a href="mailto:stomportal@gmail.com">stomportal@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!--<script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>-->
+</body>
+</html>
